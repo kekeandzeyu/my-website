@@ -7,10 +7,18 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-image: url(photo_background.jpg);
+    background-size: cover;
+    background-position: center top 30%;
+    background-repeat: no-repeat;
     text-align: center;
+    font-size: xx-large;
     padding: 1em 0;
+    height: 640px;
+}
+
+.header-content {
+    padding-top: 120px;
 }
 
 main {

@@ -90,3 +90,11 @@ footer {
     background-color: #45a049;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Initially hide Chinese content */
+.en {
+    display: block;
+}
+.zh {
+    display: none;
+}

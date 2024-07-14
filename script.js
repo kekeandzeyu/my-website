@@ -3,6 +3,16 @@ const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');
 let currentLanguage = localStorage.getItem('language') || 'en';
 
+// Set initial display based on currentLanguage
+if (currentLanguage === 'zh') {
+    enContent.forEach(el => el.style.display = 'none');
+    zhContent.forEach(el => el.style.display = 'block');
+    languageToggle.textContent = 'English';
+} else {
+    // Default to English, no need for explicit display: block
+    languageToggle.textContent = '中文';
+}
+
 languageToggle.addEventListener('click', () => {
     if (currentLanguage === 'en') {
         currentLanguage = 'zh';
@@ -17,11 +27,3 @@ languageToggle.addEventListener('click', () => {
     }
     localStorage.setItem('language', currentLanguage);
 });
-
-window.onload = () => {
-    if (currentLanguage === 'zh') {
-        languageToggle.textContent = 'English';
-        enContent.forEach(el => el.style.display = 'none');
-        zhContent.forEach(el => el.style.display = 'block');
-    }
-};

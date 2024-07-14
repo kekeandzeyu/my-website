@@ -27,9 +27,10 @@ main {
     width: 100%;
 }
 
-.profile-picture {
-    width: 250px; /* Adjust width as needed */
-    margin-right: 30px; /* Add spacing between photo and content */
+.profile-picture img {
+    max-width: 200px; /* Adjust this value as needed */
+    height: auto;   /* Maintain aspect ratio */
+    border-radius: 10px;
 }
 
 .profile-picture img {

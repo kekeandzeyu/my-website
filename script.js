@@ -1,13 +1,27 @@
-// Add any JavaScript functionality you need here.
-console.log("Script loaded successfully!");
+const languageToggle = document.getElementById('language-toggle');
+const enContent = document.querySelectorAll('.en');
+const zhContent = document.querySelectorAll('.zh');
+let currentLanguage = localStorage.getItem('language') || 'en';
 
-// Example: Animate a welcome message
-const welcomeMessage = document.querySelector("header h1");
-
-welcomeMessage.addEventListener("mouseover", () => {
-    welcomeMessage.style.color = "#007bff";
+languageToggle.addEventListener('click', () => {
+    if (currentLanguage === 'en') {
+        currentLanguage = 'zh';
+        languageToggle.textContent = 'English';
+        enContent.forEach(el => el.style.display = 'none');
+        zhContent.forEach(el => el.style.display = 'block');
+    } else {
+        currentLanguage = 'en';
+        languageToggle.textContent = '中文';
+        enContent.forEach(el => el.style.display = 'block');
+        zhContent.forEach(el => el.style.display = 'none');
+    }
+    localStorage.setItem('language', currentLanguage);
 });
 
-welcomeMessage.addEventListener("mouseout", () => {
-    welcomeMessage.style.color = "#fff";
-});
+window.onload = () => {
+    if (currentLanguage === 'zh') {
+        languageToggle.textContent = 'English';
+        enContent.forEach(el => el.style.display = 'none');
+        zhContent.forEach(el => el.style.display = 'block');
+    }
+};

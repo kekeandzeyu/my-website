@@ -9,7 +9,9 @@
 </head>
 <body>
 <header>
-    <h1>Welcome to My Page</h1>
+    <div class="en"><h1>Welcome to Kekeandzeyu's Page!</h1></div>
+    <div class="zh"><h1>欢迎来到Kekeandzeyu的页面！</h1></div>
+    <button id="language-toggle">English</button>
 </header>
 <main>
     <div class="content-wrapper">
@@ -18,29 +20,46 @@
         </div>
         <div class="content">
             <section class="about">
-                <h2>About Me</h2>
-                <p>Write something about yourself here. What are your interests? What projects are you working on?</p>
+                <div class="en"><h2>About Me</h2></div>
+                <div class="zh"><h2>我的简介</h2></div>
+                <div class="about-text en">
+                    <p>A student from Peking University, working to change his major to Computer Science.</p>
+                </div>
+                <div class="about-text zh">
+                    <p>一名努力转专业到计算机科学的北大学生。</p>
+                </div>
             </section>
             <section class="projects">
-                <h2>My Projects</h2>
+                <div class="en"><h2>My Projects</h2></div>
+                <div class="zh"><h2>我的项目</h2></div>
                 <ul>
                     <li>
-                        <a href="#">Project 1</a> - Short description of project 1.
+                        <a href="https://github.com/kekeandzeyu/Coursera-Algorithms-Princeton">
+                            Coursera-Algorithms-Princeton</a> -
+                        <span class="en">My learning path of studying Algorithms by Professor Robert Sedgewick and Kevin Wayne (unfinished).</span>
+                        <span class="zh">学习罗伯特·塞奇威克和凯文·韦恩教授的算法课程的学习笔记（未完成）。</span>
                     </li>
                     <li>
-                        <a href="#">Project 2</a> - Short description of project 2.
+                        <a href="https://github.com/kekeandzeyu/UC-Berkeley-CS61A-Study-Notes">
+                            UC-Berkeley-CS61A-Study-Notes</a> -
+                        <span class="en">My learning path of studying CS61A of UC Berkeley (unfinished).</span>
+                        <span class="zh">学习加州大学伯克利分校的CS61A课程的学习笔记（未完成）。</span>
                     </li>
                 </ul>
             </section>
             <section class="contact">
-                <h2>Contact</h2>
-                <p>Find me on <a href="#">GitHub</a>, <a href="#">Twitter</a>, etc.</p>
+                <div class="en"><h2>Contact</h2></div>
+                <div class="zh"><h2>联系方式</h2></div>
+                <div class="en"><p>Find me on <a href="https://github.com/kekeandzeyu">GitHub</a></p></div>
+                <div class="zh"><p>在 <a href="#">GitHub</a>上可以找到我。</p></div>
+                <div class="en"><p>email: kekeandzeyu@gmail.com</p></div>
+                <div class="zh"><p>邮箱: kekeandzeyu@gmail.com</p></div>
             </section>
         </div>
     </div>
 </main>
 <footer>
-    <p>© 2023 Your Name</p>
+    <p>© 2024 Zeyu Li</p>
 </footer>
 <script src="script.js"></script>
 </body>

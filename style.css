@@ -17,8 +17,19 @@ header {
     height: 640px;
 }
 
+header h1 {
+    color: aqua;
+}
+
 .header-content {
     padding-top: 120px;
+}
+
+.motto {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: x-large;
+    padding: 1em 0; /* Adjust padding as needed */
 }
 
 main {
@@ -48,6 +59,7 @@ main {
 
 .content {
     flex: 1; /* Content takes remaining space */
+    padding-left: 30px;
 }
 
 section {

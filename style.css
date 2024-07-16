@@ -39,20 +39,19 @@ header h1 {
     display: block;
     text-align: center;
     padding: 20px 40px;
-    background-color: #007bff;
+    background-color: white;  /* Set initial background to white */
     color: #fff;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Keep the transition for smoothness */
 }
 
 .projects a:hover,
 .about a:hover,
 .contact a:hover {
-    background-color: #0056b3;
+    background-color: aqua; /* Change to aqua on hover */
 }
-
 main {
     max-width: 1200px; /* Increased width to accommodate photo */
     margin: 20px auto;
@@ -68,7 +67,7 @@ main {
 }
 
 .profile-picture img {
-    max-width: 500px; /* Adjust this value as needed */
+    max-width: 570px; /* Adjust this value as needed */
     height: auto;   /* Maintain aspect ratio */
     border-radius: 10px;
 }
@@ -115,6 +114,11 @@ footer {
 /* Language-specific styling (optional) */
 .zh p {
     font-family: "Microsoft YaHei", sans-serif;
+    text-align: center;
+}
+
+.en p {
+    text-align: center;
 }
 
 #language-toggle {

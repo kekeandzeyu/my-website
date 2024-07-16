@@ -6,8 +6,12 @@ body {
     background-color: #f8f8f8; /* Slightly different background */
 }
 
-.projects {  /* No need for the 'a' tag styles here */
+.projects {
     margin-bottom: 40px;
+}
+
+.projects a {
+    color: #007bff;
 }
 
 .projects h2 { /* Different h2 styling for the subpage */

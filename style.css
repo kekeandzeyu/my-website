@@ -8,7 +8,7 @@ body {
 
 header {
     position: relative;
-    background-image: url(4.jpg);
+    background-image: url(photo_background.jpg);
     background-size: cover;
     background-position: center top 40%;
     background-repeat: no-repeat;
@@ -31,6 +31,22 @@ header h1 {
     text-align: center;
     font-size: x-large;
     padding: 1em 0; /* Adjust padding as needed */
+}
+
+.projects a { /* Target the <a> tag within the .projects section */
+    display: block;              /* Make the entire area clickable */
+    text-align: center;         /* Center text within the button */
+    padding: 20px 40px;         /* Add internal spacing (adjust values as needed) */
+    background-color: #007bff;   /* Blue button color */
+    color: #fff;                  /* White text color */
+    border: none;               /* Remove default link border */
+    border-radius: 5px;           /* Rounded corners (adjust value for desired roundness) */
+    text-decoration: none;      /* Remove link underline */
+    transition: background-color 0.3s ease; /* Optional: smooth transition on hover */
+}
+
+.projects a:hover { /* Optional: Change background on hover */
+    background-color: #0056b3;  /* Darker blue on hover */
 }
 
 main {

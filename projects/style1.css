@@ -1,0 +1,31 @@
+/* Inherit styles from the main style.css */
+@import url("../style.css"); /* This line is crucial! */
+
+/* Styles specific to the projects subpage */
+body {
+    background-color: #f8f8f8; /* Slightly different background */
+}
+
+.projects {  /* No need for the 'a' tag styles here */
+    margin-bottom: 40px;
+}
+
+.projects h2 { /* Different h2 styling for the subpage */
+    color: #28a745; /* Green */
+}
+
+/* Style for each project item  - you might need to adjust these
+   based on the complexity of your project list */
+.projects ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.projects li {
+    margin-bottom: 15px;
+}
+
+/* Optional: Add more styles for descriptions, links, etc. */
+.projects .en {
+    display: inline; /* Ensure descriptions are on the same line */
+}

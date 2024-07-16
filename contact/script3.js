@@ -1,5 +1,3 @@
-// This is exactly the same as about/script.js,
-// just make sure you have included the script in contact/index.html correctly
 const languageToggle = document.getElementById('language-toggle');
 const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');

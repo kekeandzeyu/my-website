@@ -30,7 +30,7 @@ header h1 {
     background-color: #ffffff;
     text-align: center;
     font-size: x-large;
-    padding: 1em 0; /* Adjust padding as needed */
+    padding: 1em 0;
 }
 
 .projects a,
@@ -39,26 +39,26 @@ header h1 {
     display: block;
     text-align: center;
     padding: 20px 40px;
-    background-color: white;  /* Set initial background to white */
+    background-color: white;
     color: #fff;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease; /* Keep the transition for smoothness */
+    transition: background-color 0.3s ease;
 }
 
 .projects a:hover,
 .about a:hover,
 .contact a:hover {
-    background-color: aqua; /* Change to aqua on hover */
+    background-color: aqua;
 }
 main {
-    max-width: 1200px; /* Increased width to accommodate photo */
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex; /* Enable flexbox for side-by-side layout */
+    display: flex;
 }
 
 .content-wrapper {
@@ -67,18 +67,18 @@ main {
 }
 
 .profile-picture img {
-    max-width: 570px; /* Adjust this value as needed */
-    height: auto;   /* Maintain aspect ratio */
+    max-width: 570px;
+    height: auto;
     border-radius: 10px;
 }
 
 .profile-picture img {
     width: 100%;
-    border-radius: 10px; /* Optional: Round the corners */
+    border-radius: 10px;
 }
 
 .content {
-    flex: 1; /* Content takes remaining space */
+    flex: 1;
     padding-left: 30px;
 }
 
@@ -111,7 +111,6 @@ footer {
     color: #fff;
 }
 
-/* Language-specific styling (optional) */
 .zh p {
     font-family: "Microsoft YaHei", sans-serif;
     text-align: center;
@@ -139,7 +138,6 @@ footer {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Initially hide Chinese content */
 .en {
     display: block;
 }

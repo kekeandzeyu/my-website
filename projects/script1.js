@@ -1,4 +1,3 @@
-// Re-use the language toggle functionality
 const languageToggle = document.getElementById('language-toggle');
 const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');

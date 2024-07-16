@@ -33,20 +33,24 @@ header h1 {
     padding: 1em 0; /* Adjust padding as needed */
 }
 
-.projects a { /* Target the <a> tag within the .projects section */
-    display: block;              /* Make the entire area clickable */
-    text-align: center;         /* Center text within the button */
-    padding: 20px 40px;         /* Add internal spacing (adjust values as needed) */
-    background-color: #007bff;   /* Blue button color */
-    color: #fff;                  /* White text color */
-    border: none;               /* Remove default link border */
-    border-radius: 5px;           /* Rounded corners (adjust value for desired roundness) */
-    text-decoration: none;      /* Remove link underline */
-    transition: background-color 0.3s ease; /* Optional: smooth transition on hover */
+.projects a,
+.about a,
+.contact a {
+    display: block;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.projects a:hover { /* Optional: Change background on hover */
-    background-color: #0056b3;  /* Darker blue on hover */
+.projects a:hover,
+.about a:hover,
+.contact a:hover {
+    background-color: #0056b3;
 }
 
 main {

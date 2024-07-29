@@ -10,21 +10,15 @@ body {
 
 .projects a {
     color: #007bff;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .projects h2 {
     color: #28a745;
 }
 
-.projects ul {
-    list-style-type: disc;
-    padding-left: 40px;
-}
-
-.projects li {
-    margin-bottom: 15px;
-}
-
-.projects .en {
+.projects {
     display: inline;
+    text-align: center;
 }

@@ -26,13 +26,15 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #333;
     padding: 1em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
+    box-sizing: border-box;
+    height: 60px;
 }
 
 .header-content {
@@ -41,16 +43,24 @@ header {
 }
 
 .header-content a {
-    margin-right: 15px;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease; /* Add transition */
+    box-sizing: border-box; /* Include padding and border in the height */
+    height: 60px;
+    /* Add padding to the top */
+    /* Add padding to the bottom */
+    padding: 20px 15px 10px;
+}
+
+.header-content a:hover {
+    background-color: #007bff;
 }
 
 #language-toggle {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333; /* Black background */
+    color: white; /* White text */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -61,8 +71,42 @@ header {
 }
 
 #language-toggle:hover {
-    background-color: #45a049;
+    background-color: #444; /* Slightly lighter black on hover */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align to the right edge of the button */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language-dropdown:hover #language-toggle {
+    background-color: #444;
 }
 
 .body-content {
@@ -117,6 +161,10 @@ header {
     padding: 1em 0;
 }
 
+.motto h2:hover{
+    transform: translateY(0);
+}
+
 .projects a,
 .about a,
 .contact a {
@@ -128,6 +176,12 @@ header {
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    bottom: 20px;
+    z-index: 1;
     transition: background-color 0.3s ease;
 }
 
@@ -135,6 +189,7 @@ header {
 .about a:hover,
 .contact a:hover {
     background-color: aqua;
+    transform: translateY(0);
 }
 
 main {

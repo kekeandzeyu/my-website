@@ -1,5 +1,24 @@
+@font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(GoogleSans-Medium.ttf);
+}
+
+.favicon-link {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.favicon {
+    width: 32px;
+    height: 32px;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Google Sans';
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -7,23 +26,88 @@ body {
 }
 
 header {
-    position: relative;
-    background-image: url(photo_background.jpg);
-    background-size: cover;
-    background-position: center top 40%;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-size: xx-large;
+    background-color: #fff;
     padding: 1em 0;
-    height: 600px;
-}
-
-header h1 {
-    color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .header-content {
-    padding-top: 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-content a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#language-toggle {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    right: 1%;
+}
+
+#language-toggle:hover {
+    background-color: #45a049;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.body-content {
+    padding: 20px;
+}
+
+.profile-picture {
+    text-align: center;
+    width: 100%;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+#overlay-text-en {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: chartreuse;
+    font-family: 'Google Sans';
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+
+#overlay-text-zh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: chartreuse;
+    font-family: 'Google Sans';
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .motto {
@@ -52,6 +136,7 @@ header h1 {
 .contact a:hover {
     background-color: aqua;
 }
+
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -64,17 +149,6 @@ main {
 .content-wrapper {
     display: flex;
     width: 100%;
-}
-
-.profile-picture img {
-    max-width: 570px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.profile-picture img {
-    width: 100%;
-    border-radius: 10px;
 }
 
 .content {
@@ -118,24 +192,6 @@ footer {
 
 .en p {
     text-align: center;
-}
-
-#language-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#language-toggle:hover {
-    background-color: #45a049;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .en {

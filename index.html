@@ -8,67 +8,84 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
+
 <header>
+    <a href="/" class="favicon-link">
+        <img src="favicon.png" alt="Home" class="favicon">
+    </a>
+    <nav class="header-content">
+        <a href="/about/" class="en">About Me</a>
+        <a href="/about/" class="zh">我的简介</a>
+        <a href="/projects/" class="en">My Projects</a>
+        <a href="/projects/" class="zh">我的项目</a>
+        <a href="/contact/" class="en">Contact</a>
+        <a href="/contact/" class="zh">联系方式</a>
+    </nav>
     <button id="language-toggle">English</button>
-    <div class = "header-content">
-        <div class="en"><h1>Welcome to my Page!</h1></div>
-        <div class="zh"><h1>欢迎来到我的页面！</h1></div>
-    </div>
 </header>
-<div class="motto">
-    <div class="en"><h2>But I have promises to keep, </h2>
-    <h2>And miles to go before I sleep, </h2>
-    <h2>And miles to go before I sleep.</h2>
-    <h2>- by Robert Frost</h2></div>
-    <div class="zh"><h2>在我入睡前，依然有诺言要遵守，</h2>
-    <h2>依然有漫漫长路要走，</h2>
-    <h2>依然有漫漫长路要走。</h2>
-    <h2>——罗伯特·弗罗斯特</h2></div>
-</div>
-<main>
-    <div class="content-wrapper">
-        <div class="profile-picture">
-            <img src="photo.jpg" alt="Your Name">
-        </div>
-        <div class="content">
-            <section class="about">
-                <a href="/about/">
-                    <div class="en">
-                        <h2>About Me</h2>
-                    </div>
-                    <div class="zh">
-                        <h2>我的简介</h2>
-                    </div>
-                </a>
-            </section>
 
-            <section class="projects">
-                <a href="/projects/">
-                    <div class="en">
-                        <h2>My Projects</h2>
-                    </div>
-                    <div class="zh">
-                        <h2>我的项目</h2>
-                    </div>
-                </a>
-            </section>
-
-            <section class="contact">
-                <a href="/contact/">
-                    <div class="en">
-                        <h2>Contact</h2>
-                    </div>
-                    <div class="zh">
-                        <h2>联系方式</h2>
-                    </div>
-                </a>
-            </section>
-        </div>
+<div class="body-content">
+    <div class="profile-picture">
+        <img src="photo_background.jpg" alt="Your Name">
+        <div class="en" id="overlay-text-en">Welcome to my website!</div>
+        <div class="zh" id="overlay-text-zh">欢迎来到我的网站！</div>
     </div>
-</main>
+
+    <div class="motto">
+        <div class="en"><h2>But I have promises to keep, </h2>
+            <h2>And miles to go before I sleep, </h2>
+            <h2>And miles to go before I sleep.</h2>
+            <h2>- by Robert Frost</h2></div>
+        <div class="zh"><h2>在我入睡前，依然有诺言要遵守，</h2>
+            <h2>依然有漫漫长路要走，</h2>
+            <h2>依然有漫漫长路要走。</h2>
+            <h2>——罗伯特·弗罗斯特</h2></div>
+    </div>
+
+    <main>
+        <div class="content-wrapper">
+            <div class="content">
+                <section class="about">
+                    <a href="/about/">
+                        <div class="en">
+                            <h2>About Me</h2>
+                        </div>
+                        <div class="zh">
+                            <h2>我的简介</h2>
+                        </div>
+                    </a>
+                </section>
+
+                <section class="projects">
+                    <a href="/projects/">
+                        <div class="en">
+                            <h2>My Projects</h2>
+                        </div>
+                        <div class="zh">
+                            <h2>我的项目</h2>
+                        </div>
+                    </a>
+                </section>
+
+                <section class="contact">
+                    <a href="/contact/">
+                        <div class="en">
+                            <h2>Contact</h2>
+                        </div>
+                        <div class="zh">
+                            <h2>联系方式</h2>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </main>
+</div>
+
 <footer>
     <p>© 2024 Zeyu Li</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

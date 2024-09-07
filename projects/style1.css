@@ -1,24 +1,181 @@
-@import url("../style.css");
+@font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../GoogleSans-Medium.ttf); /* Update path */
+}
 
 body {
-    background-color: #f8f8f8;
+    font-family: 'Google Sans';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+
+.favicon-link {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.favicon {
+    width: 32px; /* Adjust the size as needed */
+    height: 32px; /* Adjust the size as needed */
+}
+
+header {
+    background-color: #333;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 20px 15px 10px;
+}
+
+.header-content a:hover {
+    background-color: #007bff;
+}
+
+#language-toggle {
+    background-color: #333; /* Black background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    right: 1%;
+}
+
+#language-toggle:hover {
+    background-color: #444; /* Slightly lighter black on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align to the right edge of the button */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language-dropdown:hover #language-toggle {
+    background-color: #444;
+}
+
+.body-content {
+    padding: 20px;
+    text-align: center; /* Center the heading */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* Add some spacing below the heading */
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    padding-left: 30px;
 }
 
 .projects {
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column; /* Arrange projects vertically */
+    gap: 20px; /* Add space between project items */
+}
+
+.projects div {
+    border: 1px solid #ddd; /* Add a border */
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .projects a {
     color: #007bff;
-    display: block;
-    margin-bottom: 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.projects h2 {
-    color: #28a745;
+.projects span {
+    display: block; /* Make spans take up full width */
+    margin-top: 10px; /* Add space between link and description */
 }
 
-.projects {
-    display: inline;
+footer {
     text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.zh p {
+    font-family: "Microsoft YaHei", sans-serif;
+    text-align: center;
+}
+
+.en p {
+    text-align: center;
+}
+
+.en {
+    display: block;
+}
+.zh {
+    display: none;
 }

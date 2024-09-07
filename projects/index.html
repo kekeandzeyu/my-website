@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="style1.css"> <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <title>Zeyu Li</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
 </head>
 <body>
 <header>
-    <button id="language-toggle">English</button>
-    <div class = "header-content">
-        <div class="en"><h1>My Projects</h1></div>
-        <div class="zh"><h1>我的项目</h1></div>
+    <a href="/" class="favicon-link">
+        <img src="../favicon.png" alt="favicon" class="favicon">
+    </a>
+    <nav class="header-content">
+        <a href="/about/" class="en">About Me</a>
+        <a href="/about/" class="zh">我的简介</a>
+        <a href="/projects/" class="en">My Projects</a>
+        <a href="/projects/" class="zh">我的项目</a>
+        <a href="/contact/" class="en">Contact</a>
+        <a href="/contact/" class="zh">联系方式</a>
+    </nav>
+    <div class="language-dropdown">
+        <button id="language-toggle">English</button>
+        <div class="dropdown-content">
+            <a href="#" data-lang="en">English</a>
+            <a href="#" data-lang="zh">中文</a>
+        </div>
     </div>
 </header>
+<div class="body-content">
+    <h1 class="en">My Projects</h1>
+    <h1 class="zh">我的项目</h1>
+</div>
 <main>
     <div class="content-wrapper">
         <div class="content">

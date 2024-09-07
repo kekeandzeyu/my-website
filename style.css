@@ -21,7 +21,7 @@ body {
     font-family: 'Google Sans';
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: white;
     color: #333;
 }
 
@@ -46,11 +46,9 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: background-color 0.3s ease; /* Add transition */
-    box-sizing: border-box; /* Include padding and border in the height */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
     height: 60px;
-    /* Add padding to the top */
-    /* Add padding to the bottom */
     padding: 20px 15px 10px;
 }
 
@@ -159,10 +157,14 @@ header {
     text-align: center;
     font-size: x-large;
     padding: 1em 0;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Start below the viewport */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transitions */
 }
 
-.motto h2:hover{
-    transform: translateY(0);
+.motto.show {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move it to its normal position */
 }
 
 .projects a,
@@ -172,23 +174,25 @@ header {
     text-align: center;
     padding: 20px 40px;
     background-color: white;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    position: relative;
-    bottom: 20px;
-    z-index: 1;
-    transition: background-color 0.3s ease;
+    transform: translateY(50px); /* Adjust the initial translateY value as needed */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .projects a:hover,
 .about a:hover,
 .contact a:hover {
     background-color: aqua;
+}
+
+.about a.show,
+.projects a.show,
+.contact a.show {
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -196,8 +200,7 @@ main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff ;
     display: flex;
 }
 

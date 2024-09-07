@@ -2,10 +2,33 @@ const languageToggle = document.getElementById('language-toggle');
 const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');
 let currentLanguage = localStorage.getItem('language') || 'en';
-const buttons = document.querySelectorAll('.projects a, .about a, .contact a');
-let scrolled = false;
 const dropdownContent = document.querySelector('.dropdown-content');
 const languageLinks = dropdownContent.querySelectorAll('a');
+
+const motto = document.getElementById('motto');
+const buttons = document.querySelectorAll('.about a, .projects a, .contact a');
+
+window.addEventListener('scroll', () => {
+    const mottoRect = motto.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (mottoRect.top < windowHeight / 2 && mottoRect.bottom > windowHeight / 2) {
+        motto.classList.add('show');
+    }
+});
+
+window.addEventListener('scroll', () => {
+    buttons.forEach(button => {
+        const buttonRect = button.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if the button is in the middle OR at the bottom of the screen
+        if ((buttonRect.top < windowHeight / 2 && buttonRect.bottom > windowHeight / 2) ||
+            (window.scrollY + windowHeight >= document.body.offsetHeight - buttonRect.height)) { // Check within the loop
+            button.classList.add('show');
+        }
+    });
+});
 
 if (currentLanguage === 'zh') {
     enContent.forEach(el => el.style.display = 'none');
@@ -33,23 +56,6 @@ languageLinks.forEach(link => {
         }
 
         localStorage.setItem('language', currentLanguage);
-        dropdownContent.style.display = 'none'; // Close the dropdown
+        dropdownContent.style.display = 'none';
     });
-});
-
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const docHeight = document.documentElement.offsetHeight;
-    const contentHeight = docHeight - windowHeight;
-
-    if (scrollY > contentHeight - 200 && !scrolled) {
-        // Start floating effect when user scrolls past a certain point
-        buttons.forEach(button => {
-            button.style.bottom = "0";
-            button.style.transform = "translateY(0)";
-            button.style.opacity = "1";
-        });
-        scrolled = true;
-    }
 });

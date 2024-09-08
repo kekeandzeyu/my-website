@@ -181,12 +181,50 @@ header {
     opacity: 0;
     transform: translateY(50px); /* Adjust the initial translateY value as needed */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    position: relative;
 }
 
 .projects a:hover,
 .about a:hover,
 .contact a:hover {
     background-color: aqua;
+    text-decoration: none;
+}
+
+.projects a .line,
+.about a .line,
+.contact a .line {
+    width: 0; /* Initial width set to 0 */
+    height: 1px;
+    background-color: #333333;
+    margin: 10px 0; /* Adjust the margin as needed */
+    transition: width 0.3s ease;
+}
+
+.projects a:hover .line,
+.about a:hover .line,
+.contact a:hover .line {
+    width: 100%; /* On hover, the line extends to full width */
+}
+
+.projects a .content-wrapper,
+.about a .content-wrapper,
+.contact a .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects a .content-wrapper h2,
+.about a .content-wrapper h2,
+.contact a .content-wrapper h2 {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.projects a .content-wrapper p,
+.about a .content-wrapper p,
+.contact a .content-wrapper p {
+    margin-top: 10px; /* Adjust the margin as needed */
 }
 
 .about a.show,
@@ -194,6 +232,19 @@ header {
 .contact a.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.projects a h2,
+.about a h2,
+.contact a h2 {
+    margin-bottom: 0; /* Remove the bottom margin from the title */
+}
+
+.projects a p,
+.about a p,
+.contact a p {
+    font-size: smaller; /* Make the description text smaller */
+    color: #555; /* Adjust color as needed */
 }
 
 main {

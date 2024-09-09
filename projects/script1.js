@@ -1,36 +1,58 @@
 const languageToggle = document.getElementById('language-toggle');
 const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');
-let currentLanguage = localStorage.getItem('language') || 'en';
 const dropdownContent = document.querySelector('.dropdown-content');
 const languageLinks = dropdownContent.querySelectorAll('a');
 
-if (currentLanguage === 'zh') {
-    enContent.forEach(el => el.style.display = 'none');
-    zhContent.forEach(el => el.style.display = 'block');
-    languageToggle.textContent = 'English';
-} else {
-    languageToggle.textContent = '中文';
+const projectButtons = document.querySelectorAll('.project-button');
+
+let currentLanguage = localStorage.getItem('language') || 'en';
+updateLanguage(); // Initial language setup
+
+languageToggle.addEventListener('click', () => {
+    // Toggle the display of the dropdown content
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+window.addEventListener('scroll', () => {
+    projectButtons.forEach(button => {
+        const buttonRect = button.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if the button is in the middle OR at the bottom of the screen
+        if ((buttonRect.top < windowHeight / 2 && buttonRect.bottom > windowHeight / 2) ||
+            (window.scrollY + windowHeight >= document.body.offsetHeight - buttonRect.height)) {
+            button.classList.add('show');
+        }
+    });
+});
+
+function updateLanguage() {
+    if (currentLanguage === 'zh') {
+        enContent.forEach(el => el.style.display = 'none');
+        zhContent.forEach(el => el.style.display = 'block');
+        languageToggle.textContent = 'English';
+    } else {
+        enContent.forEach(el => el.style.display = 'block');
+        zhContent.forEach(el => el.style.display = 'none');
+        languageToggle.textContent = '中文';
+    }
 }
 
+
+// Event listeners for language links
 languageLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
         const selectedLanguage = link.getAttribute('data-lang');
 
-        if (selectedLanguage === 'en') {
-            currentLanguage = 'en';
-            languageToggle.textContent = '中文';
-            enContent.forEach(el => el.style.display = 'block');
-            zhContent.forEach(el => el.style.display = 'none');
-        } else {
-            currentLanguage = 'zh';
-            languageToggle.textContent = 'English';
-            enContent.forEach(el => el.style.display = 'none');
-            zhContent.forEach(el => el.style.display = 'block');
+        // Only update if the selected language is different from the current language
+        if (selectedLanguage !== currentLanguage) {
+            currentLanguage = selectedLanguage;
+            localStorage.setItem('language', currentLanguage);
+            updateLanguage();
         }
 
-        localStorage.setItem('language', currentLanguage);
-        dropdownContent.style.display = 'none';
+        dropdownContent.style.display = 'none'; // Close dropdown after selection
     });
 });

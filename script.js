@@ -31,8 +31,14 @@ window.addEventListener('scroll', () => {
 
         // Check if the button is in the middle OR at the bottom of the screen
         if ((buttonRect.top < windowHeight / 2 && buttonRect.bottom > windowHeight / 2) ||
-            (window.scrollY + windowHeight >= document.body.offsetHeight - buttonRect.height)) { // Check within the loop
+            (window.scrollY + windowHeight >= document.body.offsetHeight - buttonRect.height)) {
             button.classList.add('show');
+
+            // Apply the show class to the image within the button as well
+            const imageWrapper = button.querySelector('.image-wrapper');
+            if (imageWrapper) {
+                imageWrapper.classList.add('show');
+            }
         }
     });
 });

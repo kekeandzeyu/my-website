@@ -1,27 +1,42 @@
 const languageToggle = document.getElementById('language-toggle');
 const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');
-let currentLanguage = localStorage.getItem('language') || 'en';
+const dropdownContent = document.querySelector('.dropdown-content');
+const languageLinks = dropdownContent.querySelectorAll('a');
 
-if (currentLanguage === 'zh') {
-    enContent.forEach(el => el.style.display = 'none');
-    zhContent.forEach(el => el.style.display = 'block');
-    languageToggle.textContent = 'English';
-} else {
-    languageToggle.textContent = '中文';
-}
+let currentLanguage = localStorage.getItem('language') || 'en';
+updateLanguage(); // Initial language setup
 
 languageToggle.addEventListener('click', () => {
-    if (currentLanguage === 'en') {
-        currentLanguage = 'zh';
+    // Toggle the display of the dropdown content
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+function updateLanguage() {
+    if (currentLanguage === 'zh') {
+        enContent.forEach(el => el.style.display = 'none');
+        zhContent.forEach(el => el.style.display = 'block');
         languageToggle.textContent = 'English';
     } else {
-        currentLanguage = 'en';
+        enContent.forEach(el => el.style.display = 'block');
+        zhContent.forEach(el => el.style.display = 'none');
         languageToggle.textContent = '中文';
     }
+}
 
-    enContent.forEach(el => el.style.display = currentLanguage === 'en' ? 'block' : 'none');
-    zhContent.forEach(el => el.style.display = currentLanguage === 'zh' ? 'block' : 'none');
+// Event listeners for language links
+languageLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const selectedLanguage = link.getAttribute('data-lang');
 
-    localStorage.setItem('language', currentLanguage);
+        // Only update if the selected language is different from the current language
+        if (selectedLanguage !== currentLanguage) {
+            currentLanguage = selectedLanguage;
+            localStorage.setItem('language', currentLanguage);
+            updateLanguage();
+        }
+
+        dropdownContent.style.display = 'none'; // Close dropdown after selection
+    });
 });

@@ -1,18 +1,168 @@
-@import url("../style.css");
+@font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../GoogleSans-Medium.ttf); /* Adjusted path for subpage */
+}
+
+.favicon-link {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.favicon {
+    width: 32px;
+    height: 32px;
+}
 
 body {
-    background-color: #f5f5f5;
+    font-family: 'Google Sans';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+    display: flex; /* Make the body a flex container */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    flex-direction: column; /* Arrange content vertically */
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto; /* Center the main content */
+    padding: 20px;
+    background-color: #ffffff;
+    flex: 1; /* Allow the main content to grow and push the footer down */
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    width: 100%; /* Ensure the footer spans the full width */
+}
+
+header {
+    background-color: #333;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 20px 15px 10px;
+}
+
+.header-content a:hover {
+    background-color: #007bff;
+    text-decoration: #007bff;
+}
+
+#language-toggle {
+    background-color: #333; /* Black background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    right: 1%;
+}
+
+#language-toggle:hover {
+    background-color: #444; /* Slightly lighter black on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align to the right edge of the button */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language-dropdown:hover #language-toggle {
+    background-color: #444;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
 }
 
 .about {
-    text-align: justify;
+    text-align: center; /* Center the about text */
+}
+
+.about-text p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height for readability */
 }
 
 .about h2 {
-    color: #3498db;
+    text-align: center; /* Center the title */
+    margin-bottom: 10px; /* Add some space below the title */
 }
 
-.about p {
-    line-height: 1.6;
-    margin-bottom: 15px;
+.zh p {
+    font-family: "Microsoft YaHei", sans-serif;
+    text-align: center;
+}
+
+.en p {
+    text-align: center;
+}
+
+.en {
+    display: block;
+}
+
+.zh {
+    display: none;
 }

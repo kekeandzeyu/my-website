@@ -2,15 +2,7 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../GoogleSans-Medium.ttf); /* Update path */
-}
-
-body {
-    font-family: 'Google Sans';
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: #333;
+    src: url(../GoogleSans-Medium.ttf); /* Adjusted path for subpage */
 }
 
 .favicon-link {
@@ -21,8 +13,16 @@ body {
 }
 
 .favicon {
-    width: 32px; /* Adjust the size as needed */
-    height: 32px; /* Adjust the size as needed */
+    width: 32px;
+    height: 32px;
+}
+
+body {
+    font-family: 'Google Sans';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
 }
 
 header {
@@ -54,6 +54,7 @@ header {
 
 .header-content a:hover {
     background-color: #007bff;
+    text-decoration: #007bff;
 }
 
 #language-toggle {
@@ -109,17 +110,16 @@ header {
 
 .body-content {
     padding: 20px;
-    text-align: center; /* Center the heading */
+    text-align: center; /* Center the title */
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px; /* Add some spacing below the heading */
+.body-content h1 {
+    margin-bottom: 20px; /* Add some space below the title */
 }
 
 main {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto; /* Center the main content */
     padding: 20px;
     background-color: #ffffff;
 }
@@ -131,31 +131,74 @@ main {
 
 .content {
     flex: 1;
-    padding-left: 30px;
 }
 
 .projects {
     display: flex;
-    flex-direction: column; /* Arrange projects vertically */
-    gap: 20px; /* Add space between project items */
+    flex-direction: column; /* Arrange project rows vertically */
 }
 
-.projects div {
-    border: 1px solid #ddd; /* Add a border */
-    padding: 20px;
+.project-row {
+    display: flex;
+    justify-content: space-between; /* Space out projects in a row */
+    margin-bottom: 20px; /* Add space between rows */
+}
+
+.project-button {
+    display: block;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: white;
+    color: white;
+    border: none;
     border-radius: 5px;
-}
-
-.projects a {
-    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: calc(50% - 10px); /* Each project takes up half the width minus a small margin */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
 }
 
-.projects span {
-    display: block; /* Make spans take up full width */
-    margin-top: 10px; /* Add space between link and description */
+.project-button:hover {
+    background-color: cornsilk;
+    text-decoration: cornsilk;
 }
+
+.project-button .line {
+    width: 0;
+    height: 1px;
+    background-color: #333333;
+    margin: 10px 0;
+    transition: width 1.0s ease;
+}
+
+.project-button:hover .line {
+    width: 100%;
+}
+
+.project-button .content-wrapper {
+    display: flex;
+    flex-direction: column; /* Align content vertically within the button */
+    align-items: center;
+}
+
+.project-button h2 {
+    margin-bottom: 0;
+    color: black;
+}
+
+.project-button p {
+    font-size: smaller;
+    color: #555;
+    margin-top: 10px;
+}
+
+.project-button.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 footer {
     text-align: center;
@@ -176,6 +219,7 @@ footer {
 .en {
     display: block;
 }
+
 .zh {
     display: none;
 }

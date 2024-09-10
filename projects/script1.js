@@ -7,10 +7,9 @@ const languageLinks = dropdownContent.querySelectorAll('a');
 const projectButtons = document.querySelectorAll('.project-button');
 
 let currentLanguage = localStorage.getItem('language') || 'en';
-updateLanguage(); // Initial language setup
+updateLanguage();
 
 languageToggle.addEventListener('click', () => {
-    // Toggle the display of the dropdown content
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 });
 
@@ -19,7 +18,6 @@ window.addEventListener('scroll', () => {
         const buttonRect = button.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // Check if the button is in the middle OR at the bottom of the screen
         if ((buttonRect.top < windowHeight / 2 && buttonRect.bottom > windowHeight / 2) ||
             (window.scrollY + windowHeight >= document.body.offsetHeight - buttonRect.height)) {
             button.classList.add('show');
@@ -40,19 +38,17 @@ function updateLanguage() {
 }
 
 
-// Event listeners for language links
 languageLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
         const selectedLanguage = link.getAttribute('data-lang');
 
-        // Only update if the selected language is different from the current language
         if (selectedLanguage !== currentLanguage) {
             currentLanguage = selectedLanguage;
             localStorage.setItem('language', currentLanguage);
             updateLanguage();
         }
 
-        dropdownContent.style.display = 'none'; // Close dropdown after selection
+        dropdownContent.style.display = 'none';
     });
 });

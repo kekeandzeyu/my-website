@@ -2,7 +2,7 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../GoogleSans-Medium.ttf); /* Adjusted path for subpage */
+    src: url(../GoogleSans-Medium.ttf);
 }
 
 .favicon-link {
@@ -179,7 +179,7 @@ main {
 
 .project-button .content-wrapper {
     display: flex;
-    flex-direction: column; /* Align content vertically within the button */
+    flex-direction: column;
     align-items: center;
 }
 
@@ -208,7 +208,7 @@ footer {
 }
 
 .zh p {
-    font-family: "Microsoft YaHei", sans-serif;
+    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -222,4 +222,53 @@ footer {
 
 .zh {
     display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-content a {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #language-toggle {
+        margin-top: 10px;
+    }
+
+    .body-content h1 {
+        font-size: 24px; /* Adjust title size for smaller screens */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .project-row {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .project-button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .project-button h2 {
+        font-size: 18px;
+    }
 }

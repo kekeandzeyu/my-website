@@ -2,7 +2,7 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../GoogleSans-Medium.ttf); /* Adjusted path for subpage */
+    src: url(../GoogleSans-Medium.ttf);
 }
 
 .favicon-link {
@@ -23,9 +23,9 @@ body {
     padding: 0;
     background-color: white;
     color: #333;
-    display: flex; /* Make the body a flex container */
-    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
-    flex-direction: column; /* Arrange content vertically */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -61,8 +61,8 @@ header {
 }
 
 #language-toggle {
-    background-color: #333; /* Black background */
-    color: white; /* White text */
+    background-color: #333;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -73,7 +73,7 @@ header {
 }
 
 #language-toggle:hover {
-    background-color: #444; /* Slightly lighter black on hover */
+    background-color: #444;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -89,7 +89,7 @@ header {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0; /* Align to the right edge of the button */
+    right: 0;
 }
 
 .dropdown-content a {
@@ -118,10 +118,10 @@ header {
 
 main {
     max-width: 1200px;
-    margin: 20px auto; /* Center the main content */
+    margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
-    flex: 1; /* Allow the main content to grow and push the footer down */
+    flex: 1;
 }
 
 .content-wrapper {
@@ -134,22 +134,22 @@ main {
 }
 
 .contact {
-    text-align: center; /* Center the contact information */
+    text-align: center;
 }
 
 .contact h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 10px; /* Add some space below the title */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .contact p {
-    font-size: 1.2em; /* Adjust font size as needed */
-    line-height: 1.6; /* Adjust line height for readability */
-    margin-bottom: 10px; /* Add space between paragraphs */
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .contact a {
-    color: #007bff; /* Adjust link color as needed */
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -159,22 +159,22 @@ main {
 
 .contact-info {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-item {
-    width: 50%; /* Each item takes up 50% of the container width */
+    width: 50%;
     display: flex;
-    justify-content: center; /* Center the content within each item */
-    margin: 10px 0; /* Add vertical space between rows */
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .contact-icon {
-    width: 64px; /* Adjust size as needed */
+    width: 64px;
     height: 64px;
-    margin-right: 10px; /* Add space between icon and text */
+    margin-right: 10px;
 }
 
 footer {
@@ -182,11 +182,11 @@ footer {
     padding: 1em 0;
     background-color: #333;
     color: #fff;
-    width: 100%; /* Ensure the footer spans the full width */
+    width: 100%;
 }
 
 .zh p {
-    font-family: "Microsoft YaHei", sans-serif;
+    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -200,4 +200,55 @@ footer {
 
 .zh {
     display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-content a {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #language-toggle {
+        margin-top: 10px;
+    }
+
+    .body-content h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+    }
 }

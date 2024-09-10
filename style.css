@@ -70,7 +70,7 @@ header {
 }
 
 #language-toggle:hover {
-    background-color: #444; /* Slightly lighter black on hover */
+    background-color: #444;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -86,7 +86,7 @@ header {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0; /* Align to the right edge of the button */
+    right: 0;
 }
 
 .dropdown-content a {
@@ -158,14 +158,14 @@ header {
     text-align: center;
     font-size: x-large;
     padding: 1em 0;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(100px); /* Start below the viewport */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transitions */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .motto.show {
-    opacity: 1; /* Make it visible */
-    transform: translateY(0); /* Move it to its normal position */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects a,
@@ -180,7 +180,7 @@ header {
     border-radius: 5px;
     text-decoration: none;
     opacity: 0;
-    transform: translateY(50px); /* Adjust the initial translateY value as needed */
+    transform: translateY(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     position: relative;
 }
@@ -195,17 +195,17 @@ header {
 .projects a .line,
 .about a .line,
 .contact a .line {
-    width: 0; /* Initial width set to 0 */
+    width: 0;
     height: 1px;
     background-color: #333333;
-    margin: 10px 0; /* Adjust the margin as needed */
+    margin: 10px 0;
     transition: width 1.0s ease;
 }
 
 .projects a:hover .line,
 .about a:hover .line,
 .contact a:hover .line {
-    width: 100%; /* On hover, the line extends to full width */
+    width: 100%;
 }
 
 .projects a .content-wrapper,
@@ -216,40 +216,39 @@ header {
 }
 
 .image-wrapper {
-    /* Make sure images scale proportionally and fit within the container */
-    width: 200px; /* Adjust the width as needed */
-    height: 150px; /* Set a fixed height */
+    width: 200px;
+    height: 150px;
     overflow: hidden;
 }
 
 .image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    object-fit: cover;
 }
 
 .image-wrapper.left {
-    margin-right: 20px; /* Add spacing between image and text */
+    margin-right: 20px;
 }
 
 .image-wrapper.right {
-    margin-left: 20px; /* Add spacing between text and image */
+    margin-left: 20px;
 }
 
 .text-wrapper {
-    flex-grow: 1; /* Allows the text wrapper to take up remaining space */
+    flex-grow: 1;
 }
 
 .projects a .content-wrapper h2,
 .about a .content-wrapper h2,
 .contact a .content-wrapper h2 {
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-bottom: 10px;
 }
 
 .projects a .content-wrapper p,
 .about a .content-wrapper p,
 .contact a .content-wrapper p {
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 10px;
 }
 
 .about a.show,
@@ -262,14 +261,14 @@ header {
 .projects a h2,
 .about a h2,
 .contact a h2 {
-    margin-bottom: 0; /* Remove the bottom margin from the title */
+    margin-bottom: 0;
 }
 
 .projects a p,
 .about a p,
 .contact a p {
-    font-size: smaller; /* Make the description text smaller */
-    color: #555; /* Adjust color as needed */
+    font-size: smaller;
+    color: #555;
 }
 
 main {
@@ -335,63 +334,63 @@ footer {
     display: none;
 }
 
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+@media (max-width: 768px) {
     body {
-        font-size: 14px; /* Adjust font size for readability */
+        font-size: 14px;
     }
 
     header {
-        flex-direction: column; /* Stack header elements vertically */
-        height: auto; /* Allow header to adjust height based on content */
+        flex-direction: column;
+        height: auto;
     }
 
     .header-content {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center; /* Center navigation links */
-        width: 100%; /* Make navigation links span full width */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .header-content a {
-        height: auto; /* Allow navigation links to adjust height based on content */
-        padding: 10px; /* Reduce padding */
-        text-align: center; /* Center text within navigation links */
+        height: auto;
+        padding: 10px;
+        text-align: center;
     }
 
     #language-toggle {
-        margin-top: 10px; /* Add top margin to separate from navigation */
+        margin-top: 10px;
     }
 
     .profile-picture img {
-        width: 100%; /* Make profile picture span full width */
+        width: 100%;
         height: auto;
     }
 
     #overlay-text-en,
     #overlay-text-zh {
-        font-size: 30px; /* Reduce font size for smaller screens */
+        font-size: 30px;
     }
 
     .motto {
-        font-size: large; /* Adjust font size for smaller screens */
+        font-size: large;
     }
 
     .content-wrapper {
-        flex-direction: column; /* Stack content sections vertically */
+        flex-direction: column;
     }
 
     .image-wrapper {
-        width: 100%; /* Make images span full width */
+        width: 100%;
         height: auto;
-        margin-bottom: 20px; /* Add spacing below images */
+        margin-bottom: 20px;
     }
 
     .image-wrapper.left,
     .image-wrapper.right {
-        margin-right: 0; /* Remove left/right margins on images */
+        margin-right: 0;
         margin-left: 0;
     }
 
     .text-wrapper {
-        text-align: center; /* Center text within content sections */
+        text-align: center;
     }
 }

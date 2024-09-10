@@ -2,7 +2,7 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../GoogleSans-Medium.ttf); /* Adjusted path for subpage */
+    src: url(../GoogleSans-Medium.ttf);
 }
 
 .favicon-link {
@@ -23,17 +23,17 @@ body {
     padding: 0;
     background-color: white;
     color: #333;
-    display: flex; /* Make the body a flex container */
-    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
-    flex-direction: column; /* Arrange content vertically */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 main {
     max-width: 1200px;
-    margin: 20px auto; /* Center the main content */
+    margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
-    flex: 1; /* Allow the main content to grow and push the footer down */
+    flex: 1;
 }
 
 footer {
@@ -41,7 +41,7 @@ footer {
     padding: 1em 0;
     background-color: #333;
     color: #fff;
-    width: 100%; /* Ensure the footer spans the full width */
+    width: 100%;
 }
 
 header {
@@ -77,8 +77,8 @@ header {
 }
 
 #language-toggle {
-    background-color: #333; /* Black background */
-    color: white; /* White text */
+    background-color: #333;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -89,7 +89,7 @@ header {
 }
 
 #language-toggle:hover {
-    background-color: #444; /* Slightly lighter black on hover */
+    background-color: #444;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -105,7 +105,7 @@ header {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0; /* Align to the right edge of the button */
+    right: 0;
 }
 
 .dropdown-content a {
@@ -137,21 +137,21 @@ header {
 }
 
 .about {
-    text-align: center; /* Center the about text */
+    text-align: center;
 }
 
 .about-text p {
-    font-size: 1.2em; /* Adjust font size as needed */
-    line-height: 1.6; /* Adjust line height for readability */
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 .about h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 10px; /* Add some space below the title */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .zh p {
-    font-family: "Microsoft YaHei", sans-serif;
+    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -165,4 +165,43 @@ header {
 
 .zh {
     display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-content a {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #language-toggle {
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .about h2 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
 }

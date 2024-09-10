@@ -111,6 +111,10 @@ header {
     background-color: #444;
 }
 
+.body-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 main {
     max-width: 1200px;
@@ -153,6 +157,25 @@ main {
     text-decoration: underline;
 }
 
+.contact-info {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.contact-item {
+    width: 50%; /* Each item takes up 50% of the container width */
+    display: flex;
+    justify-content: center; /* Center the content within each item */
+    margin: 10px 0; /* Add vertical space between rows */
+}
+
+.contact-icon {
+    width: 64px; /* Adjust size as needed */
+    height: 64px;
+    margin-right: 10px; /* Add space between icon and text */
+}
 
 footer {
     text-align: center;

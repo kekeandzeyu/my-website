@@ -320,7 +320,7 @@ footer {
 }
 
 .zh p {
-    font-family: "Microsoft YaHei", sans-serif;
+    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -333,4 +333,65 @@ footer {
 }
 .zh {
     display: none;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    body {
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    header {
+        flex-direction: column; /* Stack header elements vertically */
+        height: auto; /* Allow header to adjust height based on content */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center navigation links */
+        width: 100%; /* Make navigation links span full width */
+    }
+
+    .header-content a {
+        height: auto; /* Allow navigation links to adjust height based on content */
+        padding: 10px; /* Reduce padding */
+        text-align: center; /* Center text within navigation links */
+    }
+
+    #language-toggle {
+        margin-top: 10px; /* Add top margin to separate from navigation */
+    }
+
+    .profile-picture img {
+        width: 100%; /* Make profile picture span full width */
+        height: auto;
+    }
+
+    #overlay-text-en,
+    #overlay-text-zh {
+        font-size: 30px; /* Reduce font size for smaller screens */
+    }
+
+    .motto {
+        font-size: large; /* Adjust font size for smaller screens */
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Stack content sections vertically */
+    }
+
+    .image-wrapper {
+        width: 100%; /* Make images span full width */
+        height: auto;
+        margin-bottom: 20px; /* Add spacing below images */
+    }
+
+    .image-wrapper.left,
+    .image-wrapper.right {
+        margin-right: 0; /* Remove left/right margins on images */
+        margin-left: 0;
+    }
+
+    .text-wrapper {
+        text-align: center; /* Center text within content sections */
+    }
 }

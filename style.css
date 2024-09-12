@@ -2,7 +2,11 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(GoogleSans-Medium.ttf);
+    src: url(GoogleSans-Medium.ttf) format('truetype'),
+         url(GoogleSans-Medium.woff) format('woff'),
+         url(GoogleSans-Medium.svg#GoogleSans-Medium) format('svg'),
+         url(GoogleSans-Medium.woff2) format('woff2'),
+         url(GoogleSans-Medium.eot) format('embedded-opentype');
 }
 
 .favicon-link {

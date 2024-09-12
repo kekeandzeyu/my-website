@@ -2,11 +2,31 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(GoogleSans-Medium.woff2) format('woff2'),
-    url(GoogleSans-Medium.woff) format('woff'),
-    url(GoogleSans-Medium.ttf) format('truetype');
-    url(GoogleSans-Medium.svg#GoogleSans-Medium) format('svg');
-    url(GoogleSans-Medium.eot) format('embedded-opentype');
+    src: url('fonts/GoogleSans-Medium.woff2') format('woff2'),
+    url('fonts/GoogleSans-Medium.woff') format('woff'),
+    url('fonts/GoogleSans-Medium.ttf') format('truetype');
+    url('fonts/GoogleSans-Medium.svg#GoogleSans-Medium') format('svg');
+    url('fonts/GoogleSans-Medium.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'iOSFont';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 1024px) {
+        body {
+            font-family: 'iOSFont', 'Google Sans', sans-serif;
+        }
+    }
+}
+
+:root {
+    --rs-font-family-ui: "Google Sans";
+    --rs-font-family-headers: "Google Sans";
 }
 
 .favicon-link {
@@ -351,8 +371,8 @@ footer {
         font-family: 'Google Sans';
         font-style: normal;
         font-weight: 400;
-        src: url(GoogleSans-Medium.woff2) format('woff2'),
-        url(GoogleSans-Medium.woff) format('woff');
+        src: url('fonts/GoogleSans-Medium.woff2') format('woff2'),
+        url('fonts/GoogleSans-Medium.woff') format('woff');
     }
 
     body {

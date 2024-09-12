@@ -2,7 +2,7 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../GoogleSans-Medium.ttf);
+    src: url(../fonts/GoogleSans-Medium.woff2) format('woff2');
 }
 
 .favicon-link {
@@ -178,7 +178,7 @@ header {
     }
 
     header {
-        flex-direction: column;
+        display: flex;
         height: auto;
     }
 

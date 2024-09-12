@@ -2,7 +2,22 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../GoogleSans-Medium.ttf);
+    src: url(../fonts/GoogleSans-Medium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'iOSFont';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 1024px) {
+        body {
+            font-family: 'iOSFont';
+        }
+    }
 }
 
 .favicon-link {
@@ -235,7 +250,7 @@ footer {
     }
 
     header {
-        flex-direction: column;
+        display: flex;
         height: auto;
     }
 
@@ -256,11 +271,11 @@ footer {
     }
 
     .body-content h1 {
-        font-size: 24px; /* Adjust title size for smaller screens */
+        font-size: 24px;
     }
 
     main {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 10px;
     }
 
     .project-row {

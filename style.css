@@ -19,14 +19,9 @@
 @supports (-webkit-touch-callout: none) {
     @media (max-width: 1024px) {
         body {
-            font-family: 'iOSFont', 'Google Sans', sans-serif;
+            font-family: 'iOSFont';
         }
     }
-}
-
-:root {
-    --rs-font-family-ui: "Google Sans";
-    --rs-font-family-headers: "Google Sans";
 }
 
 .favicon-link {
@@ -367,20 +362,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    @font-face {
-        font-family: 'Google Sans';
-        font-style: normal;
-        font-weight: 400;
-        src: url('fonts/GoogleSans-Medium.woff2') format('woff2'),
-        url('fonts/GoogleSans-Medium.woff') format('woff');
-    }
-
     body {
         font-size: 14px;
     }
 
     header {
-        flex-direction: column;
+        display: flex;
         height: auto;
     }
 

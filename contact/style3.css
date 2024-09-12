@@ -46,6 +46,7 @@ header {
 }
 
 .header-content a {
+    font-family: "Google Sans";
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -93,6 +94,7 @@ header {
 }
 
 .dropdown-content a {
+    font-family: "Google Sans";
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -112,6 +114,7 @@ header {
 }
 
 .body-content h1 {
+    font-family: "Google Sans";
     text-align: center;
     margin-bottom: 20px;
 }
@@ -149,6 +152,7 @@ main {
 }
 
 .contact a {
+    font-family: "Google Sans";
     color: #007bff;
     text-decoration: none;
 }

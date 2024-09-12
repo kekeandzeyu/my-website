@@ -43,6 +43,7 @@ header {
 }
 
 .header-content a {
+    font-family: "Google Sans";
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -58,8 +59,8 @@ header {
 }
 
 #language-toggle {
-    background-color: #333; /* Black background */
-    color: white; /* White text */
+    background-color: #333;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -70,7 +71,7 @@ header {
 }
 
 #language-toggle:hover {
-    background-color: #444; /* Slightly lighter black on hover */
+    background-color: #444;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -86,7 +87,7 @@ header {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0; /* Align to the right edge of the button */
+    right: 0;
 }
 
 .dropdown-content a {
@@ -110,16 +111,17 @@ header {
 
 .body-content {
     padding: 20px;
-    text-align: center; /* Center the title */
+    text-align: center;
 }
 
 .body-content h1 {
-    margin-bottom: 20px; /* Add some space below the title */
+    font-family: "Google Sans";
+    margin-bottom: 20px;
 }
 
 main {
     max-width: 1200px;
-    margin: 0 auto; /* Center the main content */
+    margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
 }
@@ -135,13 +137,13 @@ main {
 
 .projects {
     display: flex;
-    flex-direction: column; /* Arrange project rows vertically */
+    flex-direction: column;
 }
 
 .project-row {
     display: flex;
-    justify-content: space-between; /* Space out projects in a row */
-    margin-bottom: 20px; /* Add space between rows */
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .project-button {
@@ -189,6 +191,7 @@ main {
 }
 
 .project-button p {
+    font-family: "Google Sans";
     font-size: smaller;
     color: #555;
     margin-top: 10px;
@@ -213,6 +216,7 @@ footer {
 }
 
 .en p {
+    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -221,6 +225,7 @@ footer {
 }
 
 .zh {
+    font-family: "Google Sans";
     display: none;
 }
 

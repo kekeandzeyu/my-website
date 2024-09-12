@@ -43,6 +43,7 @@ header {
 }
 
 .header-content a {
+    font-family: "Google Sans";
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -58,8 +59,8 @@ header {
 }
 
 #language-toggle {
-    background-color: #333; /* Black background */
-    color: white; /* White text */
+    background-color: #333;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -90,6 +91,7 @@ header {
 }
 
 .dropdown-content a {
+    font-family: "Google Sans";
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -154,6 +156,7 @@ header {
 }
 
 .motto {
+    font-family: "Google Sans";
     background-color: #ffffff;
     text-align: center;
     font-size: x-large;
@@ -242,12 +245,14 @@ header {
 .projects a .content-wrapper h2,
 .about a .content-wrapper h2,
 .contact a .content-wrapper h2 {
+    font-family: "Google Sans";
     margin-bottom: 10px;
 }
 
 .projects a .content-wrapper p,
 .about a .content-wrapper p,
 .contact a .content-wrapper p {
+    font-family: "Google Sans";
     margin-top: 10px;
 }
 
@@ -267,6 +272,7 @@ header {
 .projects a p,
 .about a p,
 .contact a p {
+    font-family: "Google Sans";
     font-size: smaller;
     color: #555;
 }
@@ -294,10 +300,12 @@ section {
 }
 
 h2 {
+    font-family: "Google Sans";
     color: #333;
 }
 
 a {
+    font-family: "Google Sans";
     color: #007bff;
     text-decoration: none;
 }

@@ -2,7 +2,22 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/GoogleSans-Medium.woff2) format('woff2');
+    src: url(fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2'),
+    url(fonts/GoogleSans/GoogleSans-Medium.woff) format('woff'),
+    url(fonts/GoogleSans/GoogleSans-Medium.ttf) format('truetype');
+    url(fonts/GoogleSans/GoogleSans-Medium.svg#GoogleSans-Medium) format('svg');
+    url(fonts/GoogleSans/GoogleSans-Medium.eot) format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/SFPro/SF-Pro-Rounded-Medium.woff2) format('woff2');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.woff) format('woff');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.ttf) format('truetype');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.svg#SFRounded-Medium) format('svg');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.eot) format('embedded-opentype');
 }
 
 .favicon-link {

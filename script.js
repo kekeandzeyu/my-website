@@ -1,3 +1,5 @@
+'use script';
+
 const languageToggle = document.getElementById('language-toggle');
 const enContent = document.querySelectorAll('.en');
 const zhContent = document.querySelectorAll('.zh');
@@ -6,6 +8,9 @@ const languageLinks = dropdownContent.querySelectorAll('a');
 
 const motto = document.getElementById('motto');
 const buttons = document.querySelectorAll('.about a, .projects a, .contact a');
+
+const userOs = document.querySelector(".os");
+let os = "unknown";
 
 let currentLanguage = localStorage.getItem('language') || 'en';
 updateLanguage();
@@ -66,10 +71,6 @@ languageLinks.forEach(link => {
         dropdownContent.style.display = 'none';
     });
 });
-
-const userOs = document.querySelector(".os");
-
-let os = "unknown";
 
 function getOS() {
     const userAgent = window.navigator.userAgent;

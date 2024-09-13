@@ -2,22 +2,22 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/GoogleSans-Medium.woff2) format('woff2');
+    src: url(../fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2'),
+    url(../fonts/GoogleSans/GoogleSans-Medium.woff) format('woff'),
+    url(../fonts/GoogleSans/GoogleSans-Medium.ttf) format('truetype');
+    url(../fonts/GoogleSans/GoogleSans-Medium.svg#GoogleSans-Medium) format('svg');
+    url(../fonts/GoogleSans/GoogleSans-Medium.eot) format('embedded-opentype');
 }
 
 @font-face {
-    font-family: 'iOSFont';
+    font-family: 'SF Pro';
     font-style: normal;
     font-weight: 400;
-    src: url('fonts/SF-Pro-Display-Regular.woff2') format('woff2');
-}
-
-@supports (-webkit-touch-callout: none) {
-    @media (max-width: 1024px) {
-        body {
-            font-family: 'iOSFont';
-        }
-    }
+    src: url(../fonts/SFPro/SF-Pro-Rounded-Medium.woff2) format('woff2');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.woff) format('woff');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.ttf) format('truetype');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.svg#SFRounded-Medium) format('svg');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.eot) format('embedded-opentype');
 }
 
 .favicon-link {
@@ -173,8 +173,8 @@ main {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    width: calc(50% - 10px); /* Each project takes up half the width minus a small margin */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
+    width: calc(50% - 10px);
+    box-sizing: border-box;
 }
 
 .project-button:hover {
@@ -206,7 +206,6 @@ main {
 }
 
 .project-button p {
-    font-family: "Google Sans";
     font-size: smaller;
     color: #555;
     margin-top: 10px;
@@ -226,12 +225,10 @@ footer {
 }
 
 .zh p {
-    font-family: "Google Sans";
     text-align: center;
 }
 
 .en p {
-    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -240,7 +237,6 @@ footer {
 }
 
 .zh {
-    font-family: "Google Sans";
     display: none;
 }
 

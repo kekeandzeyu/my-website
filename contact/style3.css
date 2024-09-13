@@ -2,22 +2,22 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/GoogleSans-Medium.woff2) format('woff2');
+    src: url(../fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2'),
+    url(../fonts/GoogleSans/GoogleSans-Medium.woff) format('woff'),
+    url(../fonts/GoogleSans/GoogleSans-Medium.ttf) format('truetype');
+    url(../fonts/GoogleSans/GoogleSans-Medium.svg#GoogleSans-Medium) format('svg');
+    url(../fonts/GoogleSans/GoogleSans-Medium.eot) format('embedded-opentype');
 }
 
 @font-face {
-    font-family: 'iOSFont';
+    font-family: 'SF Pro';
     font-style: normal;
     font-weight: 400;
-    src: url('fonts/SF-Pro-Display-Regular.woff2') format('woff2');
-}
-
-@supports (-webkit-touch-callout: none) {
-    @media (max-width: 1024px) {
-        body {
-            font-family: 'iOSFont';
-        }
-    }
+    src: url(../fonts/SFPro/SF-Pro-Rounded-Medium.woff2) format('woff2');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.woff) format('woff');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.ttf) format('truetype');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.svg#SFRounded-Medium) format('svg');
+    url(../fonts/SFPro/SF-Pro-Rounded-Medium.eot) format('embedded-opentype');
 }
 
 .favicon-link {
@@ -33,7 +33,6 @@
 }
 
 body {
-    font-family: 'Google Sans';
     margin: 0;
     padding: 0;
     background-color: white;
@@ -61,7 +60,6 @@ header {
 }
 
 .header-content a {
-    font-family: "Google Sans";
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -109,7 +107,6 @@ header {
 }
 
 .dropdown-content a {
-    font-family: "Google Sans";
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -129,7 +126,6 @@ header {
 }
 
 .body-content h1 {
-    font-family: "Google Sans";
     text-align: center;
     margin-bottom: 20px;
 }
@@ -167,7 +163,6 @@ main {
 }
 
 .contact a {
-    font-family: "Google Sans";
     color: #007bff;
     text-decoration: none;
 }
@@ -205,7 +200,6 @@ footer {
 }
 
 .zh p {
-    font-family: "Google Sans";
     text-align: center;
 }
 

@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'iOSFont';
+    font-family: 'SF Pro';
     font-style: normal;
     font-weight: 400;
     src: url('fonts/SF-Pro-Display-Regular.woff2') format('woff2');
@@ -29,7 +29,6 @@
 }
 
 body {
-    font-family: 'Google Sans';
     margin: 0;
     padding: 0;
     background-color: white;
@@ -54,7 +53,6 @@ header {
 }
 
 .header-content a {
-    font-family: "Google Sans";
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -102,7 +100,6 @@ header {
 }
 
 .dropdown-content a {
-    font-family: "Google Sans";
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -147,7 +144,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: chartreuse;
-    font-family: 'Google Sans';
     font-size: 70px;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -160,14 +156,12 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: chartreuse;
-    font-family: 'Google Sans';
     font-size: 70px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .motto {
-    font-family: "Google Sans";
     background-color: #ffffff;
     text-align: center;
     font-size: x-large;
@@ -263,7 +257,6 @@ header {
 .projects a .content-wrapper p,
 .about a .content-wrapper p,
 .contact a .content-wrapper p {
-    font-family: "Google Sans";
     margin-top: 10px;
 }
 
@@ -283,7 +276,6 @@ header {
 .projects a p,
 .about a p,
 .contact a p {
-    font-family: "Google Sans";
     font-size: smaller;
     color: #555;
 }
@@ -311,12 +303,10 @@ section {
 }
 
 h2 {
-    font-family: "Google Sans";
     color: #333;
 }
 
 a {
-    font-family: "Google Sans";
     color: #007bff;
     text-decoration: none;
 }
@@ -338,7 +328,6 @@ footer {
 }
 
 .zh p {
-    font-family: "Google Sans";
     text-align: center;
 }
 
@@ -353,10 +342,9 @@ footer {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-device-width: 768px) {
     body {
         font-size: 14px;
-        font-family: 'iOSFont';
     }
 
     header {

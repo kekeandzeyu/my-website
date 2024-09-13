@@ -16,14 +16,6 @@
     src: url('fonts/SF-Pro-Display-Regular.woff2') format('woff2');
 }
 
-@supports (-webkit-touch-callout: none) {
-    @media (max-width: 1024px) {
-        body {
-            font-family: 'iOSFont';
-        }
-    }
-}
-
 .favicon-link {
     display: flex;
     align-items: center;
@@ -364,6 +356,7 @@ footer {
 @media (max-width: 768px) {
     body {
         font-size: 14px;
+        font-family: 'iOSFont';
     }
 
     header {

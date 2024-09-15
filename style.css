@@ -308,11 +308,17 @@ section {
 
 h2 {
     color: #333;
+    -webkit-font-smoothing: none;
 }
 
 a {
     color: #007bff;
     text-decoration: none;
+    -webkit-font-smoothing: none;
+}
+
+p {
+    -webkit-font-smoothing: none;
 }
 
 a:hover {

@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getOS();
 
     if (os === "iOS") {
-        document.body.style.fontFamily = 'SF Pro';
+        document.body.style.fontFamily = 'Google Sans';
     } else {
         document.body.style.fontFamily = 'Google Sans';
     }

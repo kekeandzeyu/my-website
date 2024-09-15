@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Google Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url(fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2'),
     url(fonts/GoogleSans/GoogleSans-Medium.woff) format('woff'),
     url(fonts/GoogleSans/GoogleSans-Medium.ttf) format('truetype');
@@ -12,7 +12,7 @@
 @font-face {
     font-family: 'SF Pro';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url(fonts/SFPro/SF-Pro-Rounded-Medium.woff2) format('woff2');
     url(fonts/SFPro/SF-Pro-Rounded-Medium.woff) format('woff');
     url(fonts/SFPro/SF-Pro-Rounded-Medium.ttf) format('truetype');

@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Google Sans';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     src: url(fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2'),
     url(fonts/GoogleSans/GoogleSans-Medium.woff) format('woff'),
     url(fonts/GoogleSans/GoogleSans-Medium.ttf) format('truetype');
@@ -254,7 +254,7 @@ header {
 .projects a .content-wrapper h2,
 .about a .content-wrapper h2,
 .contact a .content-wrapper h2 {
-    font-family: "Google Sans";
+    font-family: "Google Sans" !important;
     margin-bottom: 10px;
 }
 
@@ -308,17 +308,11 @@ section {
 
 h2 {
     color: #333;
-    -webkit-font-smoothing: none;
 }
 
 a {
     color: #007bff;
     text-decoration: none;
-    -webkit-font-smoothing: none;
-}
-
-p {
-    -webkit-font-smoothing: none;
 }
 
 a:hover {

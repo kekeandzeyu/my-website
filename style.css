@@ -33,6 +33,8 @@
 }
 
 body {
+    -webkit-text-size-adjust: 100%;
+    font-family: "Google Sans";
     margin: 0;
     padding: 0;
     background-color: white;

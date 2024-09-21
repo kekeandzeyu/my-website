@@ -1,12 +1,19 @@
 @font-face {
     font-family: 'Google Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url(fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2'),
     url(fonts/GoogleSans/GoogleSans-Medium.woff) format('woff'),
     url(fonts/GoogleSans/GoogleSans-Medium.ttf) format('truetype');
     url(fonts/GoogleSans/GoogleSans-Medium.svg#GoogleSans-Medium) format('svg');
     url(fonts/GoogleSans/GoogleSans-Medium.eot) format('embedded-opentype');
+}
+
+@font-face {
+    font-family: "Google Sans Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://fonts.gstatic.com/s/googlesans/v61/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPlwUvaYr.woff2) format('woff2');
 }
 
 @font-face {
@@ -33,7 +40,6 @@
 }
 
 body {
-    -webkit-text-size-adjust: 100%;
     font-family: "Google Sans";
     margin: 0;
     padding: 0;

@@ -27,6 +27,11 @@
     url(fonts/SFPro/SF-Pro-Rounded-Medium.eot) format('embedded-opentype');
 }
 
+:root {
+    -webkit-font-smoothing: none;
+    -webkit-text-size-adjust: none;
+}
+
 .favicon-link {
     display: flex;
     align-items: center;
@@ -41,6 +46,7 @@
 
 body {
     font-family: "Google Sans";
+    font-weight: normal;
     margin: 0;
     padding: 0;
     background-color: white;
@@ -262,7 +268,6 @@ header {
 .projects a .content-wrapper h2,
 .about a .content-wrapper h2,
 .contact a .content-wrapper h2 {
-    font-family: "Google Sans" !important;
     margin-bottom: 10px;
 }
 

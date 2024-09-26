@@ -2,8 +2,6 @@
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: normal;
-    font-smooth: none;
-    font-kerning: none;
     src: local('Google Sans'), url(fonts/GoogleSans/GoogleSans-Medium.woff) format('woff');
     url(fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2');
 }
@@ -29,8 +27,6 @@
 :root {
     -webkit-font-smoothing: none;
     -webkit-text-size-adjust: none;
-    -webkit-font-feature-settings: "kern" 1;
-    text-rendering: geometricPrecision;
 }
 
 .favicon-link {

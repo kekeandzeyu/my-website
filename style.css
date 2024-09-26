@@ -45,7 +45,7 @@
 }
 
 body {
-    font-family: "Google Sans";
+    font-family: "Google Sans", sans-serif;
     font-weight: normal;
     margin: 0;
     padding: 0;

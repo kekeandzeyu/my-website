@@ -11,21 +11,39 @@ const projectButtons = document.querySelectorAll('.project-button');
 let currentLanguage = localStorage.getItem('language') || 'en';
 updateLanguage();
 
-languageToggle.addEventListener('click', () => {
+checkButtonsVisibility();
+
+languageToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 });
 
-window.addEventListener('scroll', () => {
+document.body.addEventListener('click', () => {
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    }
+});
+
+// Prevent the dropdown itself from closing when clicked inside
+dropdownContent.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+window.addEventListener('scroll', checkButtonsVisibility); // Use the function for scroll events
+
+function checkButtonsVisibility() {
     projectButtons.forEach(button => {
         const buttonRect = button.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        if ((buttonRect.top < windowHeight / 2 && buttonRect.bottom > windowHeight / 2) ||
-            (window.scrollY + windowHeight >= document.body.offsetHeight - buttonRect.height)) {
+        // Check if button is in the initial viewport or has been scrolled to
+        if (buttonRect.top < windowHeight || button.classList.contains('show')) {
             button.classList.add('show');
         }
+
     });
-});
+}
+
 
 function updateLanguage() {
     if (currentLanguage === 'zh') {

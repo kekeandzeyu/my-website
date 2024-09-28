@@ -6,15 +6,24 @@ const zhContent = document.querySelectorAll('.zh');
 const dropdownContent = document.querySelector('.dropdown-content');
 const languageLinks = dropdownContent.querySelectorAll('a');
 
-const userOs = document.querySelector(".os");
-let os = "unknown";
-
 let currentLanguage = localStorage.getItem('language') || 'en';
 updateLanguage();
 
-languageToggle.addEventListener('click', () => {
+languageToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 });
+
+document.body.addEventListener('click', () => {
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    }
+});
+
+dropdownContent.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
 
 function updateLanguage() {
     if (currentLanguage === 'zh') {

@@ -9,14 +9,22 @@ const languageLinks = dropdownContent.querySelectorAll('a');
 const motto = document.getElementById('motto');
 const buttons = document.querySelectorAll('.about a, .projects a, .contact a');
 
-const userOs = document.querySelector(".os");
-let os = "unknown";
-
 let currentLanguage = localStorage.getItem('language') || 'en';
 updateLanguage();
 
-languageToggle.addEventListener('click', () => {
+languageToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent click from bubbling to body
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+document.body.addEventListener('click', () => {
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    }
+});
+
+dropdownContent.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent clicks inside dropdown from closing it
 });
 
 window.addEventListener('scroll', () => {

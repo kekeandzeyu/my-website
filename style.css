@@ -1,15 +1,16 @@
 @font-face {
     font-family: 'Google Sans';
     font-style: normal;
-    font-weight: normal;
-    src: local('Google Sans'), url(fonts/GoogleSans/GoogleSans-Medium.woff) format('woff');
-    url(fonts/GoogleSans/GoogleSans-Medium.woff2) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/googlesans/v61/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPlwUvaYr.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: "Google Sans Regular";
+    font-family: "Google Sans Bold";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
+    font-display: swap;
     src: url(https://fonts.gstatic.com/s/googlesans/v61/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPlwUvaYr.woff2) format('woff2');
 }
 
@@ -26,9 +27,8 @@
 }
 
 body {
-    letter-spacing: -0.1px;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Google Sans Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -152,17 +152,7 @@ header {
     font-size: 5.5vw;
 }
 
-@media (max-width: 768px) {
-    .overlay-text {
-        font-size: 4vw;
-    }
-}
 
-@media (max-width: 425px) {
-    .overlay-text {
-        font-size: 40px;
-    }
-}
 
 .overlay-text span {
     display: block;
@@ -200,7 +190,6 @@ header {
 .motto {
     background-color: #ffffff;
     text-align: center;
-    font-size: x-large;
     padding: 1em 0;
     opacity: 0;
     transform: translateY(100px);
@@ -216,8 +205,10 @@ header {
 .about a,
 .contact a {
     display: block;
+    width: 100%;
+    box-sizing: content-box;
     text-align: center;
-    padding: 20px 40px;
+    padding: 20px;
     background-color: white;
     color: white;
     border: none;
@@ -311,7 +302,6 @@ header {
 .projects a p,
 .about a p,
 .contact a p {
-    font-size: smaller;
     color: #555;
 }
 
@@ -334,7 +324,10 @@ main {
 }
 
 section {
+    box-sizing: content-box;
     margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h2 {
@@ -377,30 +370,70 @@ footer {
     display: none;
 }
 
-@media (max-device-width: 768px) {
-    body {
-        font-size: 30px;
+@media (max-device-width: 425px) {
+    .overlay-text {
+        font-size: 5.5vw;
     }
 
+    .motto h2 {
+        font-size: 6vw;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 10px;
+    }
+
+    .header-content a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-device-width: 769px) and (min-device-width: 426px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .content h2 {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .overlay-text {
+        font-size: 6vw;
+    }
+
+    .motto h2 {
+        font-size: 5.5vw;
+    }
+
+    .header-content a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-device-width: 768px) {
     header {
         display: flex;
         height: auto;
     }
 
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
     .header-content a {
         height: auto;
-        padding: 10px;
+        padding: 5px;
         text-align: center;
     }
 
     #language-toggle {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .profile-picture img {
@@ -408,23 +441,20 @@ footer {
         height: auto;
     }
 
-    #overlay-text-en,
-    #overlay-text-zh {
-        font-size: 30px;
-    }
-
-    .motto {
-        font-size: large;
-    }
-
     .content-wrapper {
         flex-direction: column;
+    }
+
+    .projects a,
+    .about a,
+    .contact a {
+        padding: 0;
     }
 
     .image-wrapper {
         width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     .image-wrapper.left,

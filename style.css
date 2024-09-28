@@ -467,3 +467,26 @@ footer {
         text-align: center;
     }
 }
+
+@media (max-device-width: 1500px) and (min-device-width: 769px) {
+    .overlay-text {
+        font-size: 80px;
+    }
+
+    .motto h2 {
+        font-size: 50px;
+    }
+
+    .content h2 {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .header-content a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}

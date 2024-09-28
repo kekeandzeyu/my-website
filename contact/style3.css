@@ -219,10 +219,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
     header {
         display: flex;
         height: auto;

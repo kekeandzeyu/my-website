@@ -234,19 +234,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
     header {
         display: flex;
         height: auto;
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
     }
 
     .header-content a {

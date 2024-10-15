@@ -124,10 +124,10 @@ header {
 }
 
 .profile-picture {
-    position: relative; /* Needed to absolutely position the child */
+    position: relative;
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center;     /* Vertically center */
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-picture img {
